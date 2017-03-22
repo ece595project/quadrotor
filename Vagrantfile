@@ -3,16 +3,10 @@
 
 Vagrant.configure("2") do |config|
 
-  # config.vm.boot_timeout = 600
-  # config.ssh.insert_key = true
-  # config.ssh.private_key_path = "~/.ssh/id_rsa.pub"
-  # config.ssh.insert_key = true
+  config.ssh.insert_key = false
 
-  # Set the default VM to use the Ubuntu Xenial box that we specified in
-  # `images/hostmachine/Vagrantfile`.
-
-  # config.ssh.private_key_path = "~/.ssh/id_rsa"
-
+  # Set the default VM to use the Ubuntu Xenial (16.04) box that we specified
+  # in `images/hostmachine/Vagrantfile`.
   config.vm.provider "docker" do |d|
     d.vagrant_vagrantfile = "./images/hostmachine/Vagrantfile"
   end
@@ -25,10 +19,12 @@ Vagrant.configure("2") do |config|
   #     d.name = "roscore"
   #     d.remains_running = true
   #     d.has_ssh = true
+  #
+  #     # d.vagrant_vagrantfile = "./images/hostmachine/Vagrantfile"
   #   end
   #   # roscore.ssh.username = "docker"
   #   # roscore.ssh.password = "tcuser"
-  #   # roscore.ssh.insert_key = false
+  #   # roscore.ssh.insert_key = true
   #   # roscore.ssh.port = 22
   # end
 
@@ -50,19 +46,10 @@ Vagrant.configure("2") do |config|
   config.vm.define "ros" do |ros|
     ros.vm.provider "docker" do |d|
       d.image = "ros:kinetic"
-      # d.build_dir = "./images/ROS/"
-      # d.cmd = ["roslaunch", "my-ros-app my-ros-app.launch"]
       d.name = "ros"
       d.create_args = ["-dit"]
-      d.has_ssh = true
-
-      # d.vagrant_vagrantfile = "./images/hostmachine/Vagrantfile"
+      d.has_ssh = false
     end
-
-    # ros.ssh.username = "ubuntu"
-    # ros.ssh.password = ""
-    ros.ssh.insert_key = true
-    ros.ssh.port = 22
   end
 
 
