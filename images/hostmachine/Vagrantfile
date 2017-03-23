@@ -1,13 +1,14 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+# The script makes sure that SSH is enabled on the machine.
+$script = <<SCRIPT
+echo I am provisioning...
+ps aux | grep 'sshd:' | awk '{print $2}' | xargs kill
+SCRIPT
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "boxcutter/ubuntu1604"
-
-  config.ssh.insert_key = false
-
-  config.vm.provision "docker" do |d|
-    d.pull_images "ros:kinetic"
-  end
+  config.vm.box = "ubuntu/xenial64"
+  config.vm.provision "docker"
+  config.vm.provision "shell", inline: $script
 end

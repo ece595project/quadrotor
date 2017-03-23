@@ -1,6 +1,6 @@
 FROM ros:kinetic
 
-RUN source /opt/ros/kinetic/setup.bash
+RUN echo "source /opt/ros/kinetic/setup.bash" >> /etc/bash.bashrc
 
 # RUN roscore &
 
