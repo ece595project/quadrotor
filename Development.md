@@ -1,3 +1,10 @@
+---
+title: Development Guidelines
+layout: default
+---
+
+# Quadrotor SAR Project (Development Guidelines)
+
 All development should take place using Docker to provide the ROS images.
 
 __NOTE:__ Docker is an application that creates a pseudo-VM that packages an application (in our case, ROS) and runs it on top of your current system. Using Docker ensures that everyone working on the project will have the same environment to avoid conflicts.
@@ -84,5 +91,3 @@ __NOTE:__ Docker is an application that creates a pseudo-VM that packages an app
     ```
 
     Great! Now we have a way to run ROS on virtually any OS without having to spin up a full VM. Starting an instance of ROS takes seconds, instead of minutes, and we can start up a standardized environment without having to ensure that everyone has the same host, the same software, and the same VM.
-
-4. From here, we can take advantage of a few scripts to get us up and running for development.

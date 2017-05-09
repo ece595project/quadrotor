@@ -30,4 +30,8 @@ In 2015, ROS provided weak support for Docker by providing Docker "images" for R
 
 ## What are the drawbacks?
 
-Unfortunately, as with much of ROS, there is little to no documentation on how to utilize the Docker images properly, which means that you are, as per usual, on your own when it comes to figuring out how to use the Docker images properly.
+Unfortunately, as with much of ROS, there is little to no documentation on how to utilize the Docker images properly, which means that you are, as per usual, on your own when it comes to figuring out how to use ROS inside the Docker images properly.
+
+## Our Approach
+
+Luckily, we are able to utilize the same code base for our Docker image for every quadrotor. Since each quadrotor performs nearly the same actions, we can reuse the code from one quadrotor and apply it to as many instances (or individual quadrotors) as we have available. Because swarm tactics dictates that each quadrotor performs its tasks nearly independently of any centralized hub, we are able to take advantage of ad-hoc networking and Docker to create the behavior for each quadrotor.
