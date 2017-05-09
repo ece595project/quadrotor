@@ -24,6 +24,8 @@ Search and rescue is a dangerous job, requiring a coordinated, large-scale effor
 
 The big-picture implementation of our project would be for search and rescue assistance. Aerial robots could conduct a coordinated survey of a designated area, giving rescue personnel critical information to safely navigate to found victims. However, with the time that we have to complete our project, coordinated movement will be our core focus.
 
+[![QUADROTOR VIDEO](http://img.youtube.com/vi/PK7pUsQQ6ss/0.jpg)](https://www.youtube.com/watch?v=PK7pUsQQ6ss)
+
 ## Initial Proposal
 
 Take a look at our [initial proposal](https://ece595project.github.io/quadrotor/Initial-Proposal) for the project, and then view the relevant sections below to see how things have changed since the start of the project.
