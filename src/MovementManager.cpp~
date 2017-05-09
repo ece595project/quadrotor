@@ -1,0 +1,256 @@
+#include "ros/ros.h"
+#include "std_msgs/String.h"
+#include "std_msgs/Float64.h"
+#include "geometry_msgs/Twist.h"
+#include "geometry_msgs/Point.h"
+#include "geometry_msgs/Vector3.h"
+#include "gazebo_msgs/GetModelState.h"
+#include "ece595project/next_position.h"
+#include "ece595project/set_position.h"
+#include "ece595project/movement_status.h"
+#include "math.h"
+#include "time.h"
+
+#define PI 3.14159265
+
+class MovementManager
+{
+private:
+	std::string _name;
+	geometry_msgs::Point _last_point;
+	geometry_msgs::Point _next_point;
+	ros::NodeHandle _n;
+	ros::Publisher _twist_pub;
+	ros::Publisher _status_pub;
+	ros::ServiceClient _model_client; //spoof gps
+	double _distance_threshold = -1.0;
+	double _starting_distance = 0.0;
+	double _max_speed = 1.0;
+	bool _stop_at_point = false;
+	time_t _movement_start;
+	double _time_for_movement;
+	
+	double remainingDistance(geometry_msgs::Point, geometry_msgs::Point);
+	void updateMovement();
+	void setMovement();
+
+public:
+	enum MovementState 
+	{ 
+		NoDestination = 1001, 
+		HaveWaypoint = 1002, 
+		MovingToWaypoint = 1003,
+		HaveStop = 1004,
+		MovingToStop = 1005, 
+		AtDestination = 1006
+	} _current_state;
+
+	MovementManager(std::string);
+	~MovementManager();
+	void updateManager();
+	void setThreshold(float);
+	bool setPositionCallback(ece595project::set_position::Request&, ece595project::set_position::Response&);
+	geometry_msgs::Point getCurrentPoint();
+};
+
+void MovementManager::setThreshold(float threshold)
+{
+	_distance_threshold = threshold;
+}
+
+bool MovementManager::setPositionCallback(ece595project::set_position::Request& request, ece595project::set_position::Response& response)
+{
+	_next_point = request.new_position;
+	_max_speed = request.movement_speed;
+	_stop_at_point = request.stop_at_point;
+	if (request.stop_at_point)
+	{
+		_current_state = HaveStop;
+	}
+	else
+	{
+		_current_state = HaveWaypoint;
+	}
+	ROS_INFO("New set");
+	return true;
+}
+
+void MovementManager::updateManager()
+{
+	ece595project::movement_status status;
+	switch(_current_state)
+	{
+		case NoDestination:
+		{
+			status.state_code = (int)NoDestination;
+			status.state_name = "No Destination";
+			break;
+		}
+		case HaveWaypoint:
+		{
+			status.state_code = (int)HaveWaypoint;
+			status.state_name = "Have Waypoint";
+			geometry_msgs::Point current;
+			current = getCurrentPoint();
+			_starting_distance = remainingDistance(current, _next_point);
+			_current_state = MovingToWaypoint;
+			updateMovement();
+			time(&_movement_start);
+			_time_for_movement = _starting_distance / _max_speed;
+			ROS_INFO("movement = %f", _time_for_movement);
+			break;
+		}
+		case MovingToWaypoint:
+		{
+			status.state_code = (int)MovingToWaypoint;
+			status.state_name = "Moving To Waypoint";
+			time_t current_time;
+			time(&current_time);
+			double diff = difftime(current_time, _movement_start);
+			ROS_INFO("diff = %f", diff);
+			if (diff >= _time_for_movement)
+			{
+				_current_state = AtDestination;
+			}
+			break;
+		}
+		case HaveStop:
+		{
+			status.state_code = (int)HaveStop;	
+			status.state_name = "Have Stop";
+			geometry_msgs::Point current;
+			current = getCurrentPoint();
+			_starting_distance = remainingDistance(current, _next_point);
+			_current_state = MovingToStop;
+			break;
+		}
+		case MovingToStop:
+		{
+			status.state_code = (int)MovingToStop;
+			status.state_name = "Moving to Stop";
+			updateMovement();
+			break;
+		}
+		case AtDestination:
+		{
+			status.state_code = (int)AtDestination;
+			status.state_name = "At Destination";
+			break;
+		}
+		default:
+		{	
+			break;
+		}
+	}
+	_status_pub.publish(status);
+}
+
+void MovementManager::updateMovement()
+{
+	geometry_msgs::Twist twist;
+	geometry_msgs::Vector3 angular;
+	angular.x = 0.0;
+	angular.y = 0.0;
+	angular.z = 0.0;
+	geometry_msgs::Vector3 linear;
+	geometry_msgs::Point current = getCurrentPoint();
+	
+	double _remaining_distance = remainingDistance(current, _next_point);
+	double _movement_ratio = 1.0;
+	if (_stop_at_point)
+	{
+		_movement_ratio = _remaining_distance / _starting_distance;
+	}
+	double _movement_speed = _max_speed * _movement_ratio;
+
+	if (_remaining_distance > _distance_threshold)
+	{	
+		linear.x = ((_next_point.x - current.x) / _remaining_distance) * _movement_speed;
+		linear.y = ((_next_point.y - current.y) / _remaining_distance) * _movement_speed;
+		linear.z = ((_next_point.z - current.z) / _remaining_distance) * _movement_speed;
+	}
+	else 
+	{
+		_current_state = AtDestination;
+		if (_stop_at_point)
+		{
+			linear.x = 0.0;
+			linear.y = 0.0;
+			linear.z = 0.0;
+		}
+	}
+
+	twist.linear = linear;
+	twist.angular = angular;
+	ROS_INFO("x = %f y = %f z = %f ratio = %f", linear.x, linear.y, linear.z, _movement_ratio);
+	_twist_pub.publish(twist);
+}
+
+double MovementManager::remainingDistance(geometry_msgs::Point start, geometry_msgs::Point end)
+{
+	return sqrt( pow( end.x - start.x, 2.0 ) + pow( end.y - start.y, 2.0 ) + pow( end.z - start.z, 2.0));
+}
+
+//Safe retreival of current point
+geometry_msgs::Point MovementManager::getCurrentPoint()
+{
+	gazebo_msgs::GetModelState srv;
+	srv.request.model_name = _name;
+	srv.request.relative_entity_name = "world";
+	
+	if (_model_client.call(srv))
+	{
+		if (srv.response.success)
+		{
+			ROS_INFO("success");
+			_last_point = srv.response.pose.position;
+			return _last_point;
+		}
+	}
+
+	return _last_point;
+}
+
+MovementManager::MovementManager(std::string name)
+{
+	_name = name;
+	//std::string publish_topic = "uav1/cmd_vel";
+	_twist_pub = _n.advertise<geometry_msgs::Twist>(_name + "/cmd_vel", 1);
+	_status_pub = _n.advertise<ece595project::movement_status>(_name + "/movement_status", 1);
+	_model_client = _n.serviceClient<gazebo_msgs::GetModelState>("gazebo/get_model_state");
+	_current_state = NoDestination;
+}
+
+MovementManager::~MovementManager()
+{
+}
+
+int main (int argc, char** argv)
+{
+	ros::init(argc, argv, "movement_manager");
+	ros::NodeHandle n;
+	std::string id_str = "";
+	if (argc >= 2)
+	{
+		id_str = argv[1];
+	}
+
+	MovementManager manager(id_str);
+	ros::ServiceServer srv1 = n.advertiseService(id_str + "/set_position", &MovementManager::setPositionCallback, &manager);
+	manager.setThreshold(0.025);
+
+	ROS_INFO("Staring");
+
+	ros::Rate loop_rate(60);
+
+	while(ros::ok())
+	{	
+		manager.updateManager();		
+
+		ros::spinOnce();
+		loop_rate.sleep();
+	}
+	return 0;
+}
+
+

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+
+<launch>
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor.gazebo.xacro" />
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="headless" value="$(arg headless)"/>
+    <arg name="debug" value="$(arg debug)"/>
+  </include>
+  <!-- <include file="$(find gazebo_ros)/launch/willowgarage_world.launch" /> /-->
+
+  <group ns="uav1">
+     <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+       <arg name="name" value="uav1" />
+       <arg name="tf_prefix" value="uav1" />
+       <arg name="model" value="$(arg model)" />
+       <arg name="x" value="2.0" />
+     </include>
+   </group>     
+   <node name="manager1" pkg="ece595project" type="movement_manager" args="uav1" />
+   <node name="planner1" pkg="ece595project" type="path_planner" args="uav1" />
+   <node name="brain1" pkg="ece595project" type="quad_brain" args="uav1" />
+
+   <group ns="uav2">
+     <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+       <arg name="name" value="uav2" />
+       <arg name="tf_prefix" value="uav2" />
+       <arg name="model" value="$(arg model)" />
+       <arg name="y" value="2.0" />
+     </include>
+   </group>
+   <node name="manager2" pkg="ece595project" type="movement_manager" args="uav2" />
+   <node name="planner2" pkg="ece595project" type="path_planner" args="uav2" />
+   <node name="brain2" pkg="ece595project" type="quad_brain" args="uav2" />
+
+   <group ns="uav3">
+     <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+       <arg name="name" value="uav3" />
+       <arg name="tf_prefix" value="uav3" />
+       <arg name="model" value="$(arg model)" />
+       <arg name="x" value="0" />
+       <arg name="y" value="0" />
+     </include>
+   </group>
+   <node name="manager3" pkg="ece595project" type="movement_manager" args="uav3" />
+   <node name="planner3" pkg="ece595project" type="path_planner" args="uav3" />
+   <node name="brain3" pkg="ece595project" type="quad_brain" args="uav3" />
+
+</launch>
+
