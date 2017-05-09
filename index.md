@@ -24,7 +24,7 @@ Search and rescue is a dangerous job, requiring a coordinated, large-scale effor
 
 The big-picture implementation of our project would be for search and rescue assistance. Aerial robots could conduct a coordinated survey of a designated area, giving rescue personnel critical information to safely navigate to found victims. However, with the time that we have to complete our project, coordinated movement will be our core focus.
 
-{% include youtubePlayer.html id=page.youtubeId %}
+{% include youtubePlayer.html id="PK7pUsQQ6ss" %}
 
 ## Initial Proposal
 
