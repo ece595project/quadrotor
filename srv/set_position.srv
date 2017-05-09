@@ -1,0 +1,5 @@
+geometry_msgs/Point new_position
+float64 movement_speed
+bool stop_at_point
+---
+bool last_finished

@@ -1,0 +1,9 @@
+geometry_msgs/Point origin
+float64 increment_per_call
+float64 region_degree_start
+float64 region_degree_stop
+float64 start_offset
+float64 path_freq
+---
+bool success
+geometry_msgs/Point start_point

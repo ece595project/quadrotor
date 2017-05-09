@@ -1,0 +1,4 @@
+bool current_attainable
+---
+bool success
+geometry_msgs/Point next_point

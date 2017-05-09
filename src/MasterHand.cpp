@@ -3,6 +3,8 @@
 #include "geometry_msgs/Vector3.h"
 #include "math.h"
 
+int global = 0;
+
 int main (int argc, char** argv)
 {
 	ros::init(argc, argv, "MasterHand");
@@ -14,7 +16,7 @@ int main (int argc, char** argv)
 	ros::NodeHandle n3;
 	ros::Publisher uav3_pub = n3.advertise<geometry_msgs::Twist>("uav3/cmd_vel", 1000);
 
-  	ros::Rate loop_rate(100);
+  	ros::Rate loop_rate(10);
 
 	float pi = 3.1415926;
   	int count = 0;
