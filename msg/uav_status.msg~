@@ -1,0 +1,5 @@
+string uav_id
+int64 status_code
+string status_name
+geometry_msgs/Point current_destination
+
