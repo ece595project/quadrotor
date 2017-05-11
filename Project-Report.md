@@ -1,11 +1,12 @@
 ---
 title: Project Report
 layout: default
+description: Quadrotor SAR project report.
 ---
 
 # {{page.title}}
 
-Welcome to The Quadrotor Search and Rescue Project Documentation Page!
+{{page.description}}
 
 ## Table of Contents
 

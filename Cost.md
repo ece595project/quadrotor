@@ -1,11 +1,12 @@
 ---
-title: Project Difficulties
+title: Cost
 layout: default
+description: Anticipated project costs for the Quadrotor SAR project.
 ---
 
-# Quadrotor SAR Project
+# {{page.title}}
 
-Welcome to The Quadrotor Search and Rescue Project Documentation Page!
+{{page.description}}
 
 ## Table of Contents
 

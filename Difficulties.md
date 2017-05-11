@@ -1,11 +1,12 @@
 ---
 title: Project Difficulties
 layout: default
+description: Projected difficulties in the Quadrotor SAR project.
 ---
 
-# Quadrotor SAR Project
+# {{page.title}}
 
-Welcome to The Quadrotor Search and Rescue Project Documentation Page!
+{{page.description}}
 
 ## Table of Contents
 

@@ -1,18 +1,23 @@
 ---
-title: Docker Development
+title: Docker
 layout: default
+description: Description of Docker integration into ROS.
 ---
 
-# Quadrotor SAR Project (Docker)
+# {{page.title}}
 
-One major hurdle we faced in our project was a way to implement a consistent development environment with ROS. Unfortunately, ROS versioning can be problematic, and their development workspaces do not promote rapid development. Furthermore, they also suffer from the problem of one coder saying, "well, it worked on my system."
-
-To solve this problem, we decided to take advantage of a little-known feature of ROS integrations with a novel method for development using [Docker](https://www.docker.com).
+{{page.description}}
 
 ## Table of Contents
 
 * This will become a table of contents (this text will be scraped).
 {:toc}
+
+## Using Docker With ROS
+
+One major hurdle we faced in our project was a way to implement a consistent development environment with ROS. Unfortunately, ROS versioning can be problematic, and their development workspaces do not promote rapid development. Furthermore, they also suffer from the problem of one coder saying, "well, it worked on my system."
+
+To solve this problem, we decided to take advantage of a little-known feature of ROS integrations with a novel method for development using [Docker](https://www.docker.com).
 
 ## What is Docker?
 

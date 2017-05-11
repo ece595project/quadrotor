@@ -13,8 +13,7 @@ description: Anticipated difficulties implementing the Quadrotor SAR project.
 * This will become a table of contents (this text will be scraped).
 {:toc}
 
-
-## Organization
+## Project Organization
 
 The first phase of our project will be to design our quadrotors. We will discuss what components will be needed and where to source them from. As it may take a while to obtain all components, we will then begin discussing the design of the swarm system and start development while we are waiting on our components to arrive. Once the components arrive, we will be able to develop the code for them individually, so that we can complete our quadrotors once we have all of the components without any delay. Once they are fully assembled, we will begin the final phase and run real-world tests and perform reliability measurements to ensure they are working as desired.
 

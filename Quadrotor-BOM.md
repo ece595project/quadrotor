@@ -1,8 +1,7 @@
 ---
 title: Quadrotor BOM
 layout: default
-description: Quadrotor SAR project quadrotor BOM.
-section_header: Bill of Materials
+description: Quadrotor SAR project quadrotor bill of materials.
 ---
 
 # {{page.title}}
@@ -14,7 +13,7 @@ section_header: Bill of Materials
 * This will become a table of contents (this text will be scraped).
 {:toc}
 
-## {{page.section_header}}
+## Bill of Materials
 
 We decided that the best path forward with our quadrotors would be to build our quadrotors to spec rather than buying them as a kit. Buying the quadrotors as a kit would be cost-prohibitive, as a quadrotor kit with vision and sensor capabilities cost upwards of several hundred dollars.
 

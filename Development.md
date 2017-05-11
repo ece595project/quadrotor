@@ -1,9 +1,19 @@
 ---
 title: Development Guidelines
 layout: default
+description: Code development guidelines for the  Quadrotor SAR project.
 ---
 
-# Quadrotor SAR Project (Development Guidelines)
+# {{page.title}}
+
+{{page.description}}
+
+## Table of Contents
+
+* This will become a table of contents (this text will be scraped).
+{:toc}
+
+## Guidelines
 
 All development should take place using Docker to provide the ROS images.
 

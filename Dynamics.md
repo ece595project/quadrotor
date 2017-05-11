@@ -13,7 +13,7 @@ description: Quadrotor dynamics used in the Quadrotor SAR project.
 * This will become a table of contents (this text will be scraped).
 {:toc}
 
-## Dynamics
+## Resources
 
 One great thing about quadrotors is that the kinematics of the system are widely known and available, especially at the speeds we hope to operate at. We were able to find resources describing the dynamics we would need to follow using resources widely available on the internet. Here are some resources we used to analyze the dynamics of the system:
 

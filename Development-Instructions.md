@@ -1,11 +1,12 @@
 ---
 title: Development Instructions
 layout: default
+description: Developer instructions to start the Quadrotor SAR demo.
 ---
 
-# Quadrotor SAR Project (Development Instructions)
+# {{page.title}}
 
-Welcome to The Quadrotor Search and Rescue Project Documentation Page!
+{{page.description}}
 
 ## Table of Contents
 

@@ -28,6 +28,7 @@ The big-picture implementation of our project would be for search and rescue ass
 
 - [x] Worked with an actual quadrotor to learn how to subscribe to ROS topics from actual sensor data.
 - [x] Implement ROS code for quadrotor movement.
+- [x] Test component integration with ROS topics.
 
 ## Initial Proposal
 
