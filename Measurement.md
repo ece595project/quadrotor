@@ -1,16 +1,18 @@
 ---
-title: Project Difficulties
+title: Project Measurement
 layout: default
+description: How we propose to measure the progress of the Quadrotor SAR project.
 ---
 
-# Quadrotor SAR Project
+# {{page.title}}
 
-Welcome to The Quadrotor Search and Rescue Project Documentation Page!
+{{page.description}}
 
 ## Table of Contents
 
 * This will become a table of contents (this text will be scraped).
 {:toc}
+
 
 ## Measurement
 
