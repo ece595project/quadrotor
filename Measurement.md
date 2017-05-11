@@ -8,6 +8,8 @@ description: How we propose to measure the progress of the Quadrotor SAR project
 
 {{page.description}}
 
+[Home](https://ece595project.github.io/quadrotor/)
+
 ## Table of Contents
 
 * This will become a table of contents (this text will be scraped).
