@@ -33,7 +33,7 @@ So how does using ROS in Docker work? Well, Docker provides "images", which can 
 
 One of the major benefits of using ROS inside a Docker container is that Docker images are pre-built binaries, meaning you can upload and download an image quickly, rather than having to install ROS on each individual machine, ROS is installed once inside the image, and can be compressed and pushed around to any machine running Docker, and run again, in a matter of seconds. What this also means is that running an instance of docker can easily be scaled multiple times on the same computer or network, giving you any number of instances of the same application, almost instantly.
 
-In 2015, ROS provided weak support for Docker by providing Docker "images" for ROS, available of [Docker Hub](https://hub.docker.com). Since the initial release of the Docker images in 2015, they have provided sporadic updates to the Docker images, and do not provide a consistent release cycle for new versions of ROS, but have included Gazebo images along with their ROS images. See more on the [ROS website](http://wiki.ros.org/docker/Tutorials/Docker).
+In 2015, ROS provided weak support for Docker by providing Docker "images" for ROS, available on [Docker Hub](https://hub.docker.com). Since the initial release of the Docker images in 2015, they have provided sporadic updates to the Docker images, and do not provide a consistent release cycle for new versions of ROS, but have included Gazebo images along with their ROS images. See more on the [ROS website](http://wiki.ros.org/docker/Tutorials/Docker).
 
 ## What are the drawbacks?
 

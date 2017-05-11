@@ -36,14 +36,24 @@ Take a look at our [initial proposal](https://ece595project.github.io/quadrotor/
 
 - [Cost](https://ece595project.github.io/quadrotor/Cost)
 - [Difficulties](https://ece595project.github.io/quadrotor/Difficulties)
-- [Organization](https://ece595project.github.io/quadrotor/Organization)
 - [Measurement](https://ece595project.github.io/quadrotor/Measurement)
+- [Organization](https://ece595project.github.io/quadrotor/Organization)
 - [Software](https://ece595project.github.io/quadrotor/Software)
 
-## Design Documents
+## Links
 
-- In the [development guidelines](https://ece595project.github.io/quadrotor/Development), you will find information on how we developed our project using [docker](https://www.docker.com).
+Below you will find links to the project pages, detailing our design project.
+
+### Design Documents
+
+- In the [development guidelines](https://ece595project.github.io/quadrotor/Development), you will find information on how we developed our project using [docker](https://www.docker.com). In the [deployment instructions](https://ece595project.github.io/quadrotor/Deployment-Instructions), you will find information on how to set up ROS to run our demo.
+
+- On the [search algorithm](https://ece595project.github.io/quadrotor/Search-Algorithm) page, you will find information on how we designed our search and rescue algorithm.
 
 - On the [docker](https://ece595project.github.io/quadrotor/Docker) page, you will find information on our design methodology to utilize Docker in our swarm.
 
+- On the [dynamics](https://ece595project.github.io/quadrotor/Dynamics) page, you will find information on the resources we used to define the dynamics of the quadrotor.
+
 - In the [quadrotor BOM](https://ece595project.github.io/quadrotor/Quadrotor-BOM), you will find information on how we plan to source the components of our quadrotors for physical testing.
+
+- In the [testing](https://ece595project.github.io/quadrotor/Testing) document, you will find information on how we tested our algorithm and information on our experience with real hardware running ROS.

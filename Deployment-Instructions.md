@@ -1,7 +1,7 @@
 ---
-title: Development Instructions
+title: Deployment Instructions
 layout: default
-description: Developer instructions to start the Quadrotor SAR demo.
+description: Deployment instructions to start the Quadrotor SAR demo.
 ---
 
 # {{page.title}}
