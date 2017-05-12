@@ -67,7 +67,7 @@ b = 180;
 b_rad = deg2rad(b);
 
 figure
-polarplot(rho, theta)
+% polarplot(rho, theta)
 for i = 1:numQuadrotors
     c = i*(360/numQuadrotors);
     c_rad = deg2rad(c);
