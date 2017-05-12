@@ -61,7 +61,9 @@ Below you will find links to the project pages, detailing our design project.
 
 - On the [dynamics](https://ece595project.github.io/quadrotor/Dynamics) page, you will find information on the resources we used to define the dynamics of the quadrotor.
 
-- In the [quadrotor BOM](https://ece595project.github.io/quadrotor/Quadrotor-BOM), you will find information on how we plan to source the components of our quadrotors for physical testing.
+- In the [quadrotor BOM](https://ece595project.github.io/quadrotor/Quadrotor-BOM), you will find information on how we planned to source the components of our quadrotors for physical testing.
+
+- Check out the [Quadrotor Build Details](https://ece595project.github.io/quadrotor/Build-Details) for a more accurate estimate of the overall cost.
 
 ### Testing Documents
 
