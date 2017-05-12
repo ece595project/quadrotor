@@ -59,6 +59,13 @@ Below you will find links to the project pages, detailing our design project.
 
 - In the [quadrotor BOM](https://ece595project.github.io/quadrotor/Quadrotor-BOM), you will find information on how we plan to source the components of our quadrotors for physical testing.
 
+### Testing Documents
+
 - In the [testing](https://ece595project.github.io/quadrotor/Testing) document, you will find information on how we tested our algorithm and information on our experience with real hardware running ROS.
+
+### Reports
+
+- We have included a [project report](https://ece595project.github.io/quadrotor/Project-Report), summing up our experiences working on this project and how we would like to proceed in the future.
+
 
 **[back to top](#table-of-contents)**

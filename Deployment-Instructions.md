@@ -43,4 +43,4 @@ description: Deployment instructions to start the Quadrotor SAR demo.
 
         Node based on MasterHand.cpp in src.
 
-**[⬆ back to top](#table-of-contents)**
+**[back to top](#table-of-contents)**

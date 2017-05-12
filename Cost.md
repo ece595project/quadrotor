@@ -15,11 +15,7 @@ description: Anticipated project costs for the Quadrotor SAR project.
 * This will become a table of contents (this text will be scraped).
 {:toc}
 
-## Initial Cost Estimate
-
-We estimate that with all components, the quadrotors will cost in the range of ~$60 per quadrotor. We hope to split the cost between the team members to incur an equal cost for the project.
-
-## Actual Cost Estimate
+## Cost Estimate
 
 Our cost estimate per quadrotor was quite far from reality. What we failed to take into account was the cost of electronics properly. While micro quadcopters may be possible at the sub $100 range, the necessary components that we required, such as GPS and cameras, increase the size of quadrotor needed to carry the weight, which increases the cost substantially.
 
@@ -35,4 +31,4 @@ However, it is still true that we would be able to decrease the cost of the syst
 
 Check out the [Quadrotor BOM](https://ece595project.github.io/quadrotor/Quadrotor-BOM) for a breakdown of our anticipated costs.
 
-**[⬆ back to top](#table-of-contents)**
+**[back to top](#table-of-contents)**

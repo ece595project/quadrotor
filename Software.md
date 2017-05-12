@@ -17,6 +17,14 @@ description: Quadrotor SAR software description.
 
 ## Software Used
 
-We will primarily be using ROS and Gazebo for the development of the swarm control system, which means that the vast majority of our code will be written using C, C++, ROS Configuration Scripts, and possibly a small Python component. Development will primarily be done in a virtual machine shared among the group to ensure compatibility with the target system. To accomplish this, we will be using the free software Docker.
+### ROS + Gazebo
+
+Most of the development was done within ROS and Gazebo. Code can be found at the project's GitHub page, and deployment instructions can be found [here](https://ece595project.github.io/quadrotor/Deployment-Instructions).
+
+Code was written in C++ and implemented using `roscpp`. Testing of actual quadcopter readings were done using Python and `rospy`.
+
+### Docker
+
+Docker played a large role in the development and deployment process, and we used Docker extensively for ensuring we had a consistent and clean development environment.
 
 **[back to top](#table-of-contents)**

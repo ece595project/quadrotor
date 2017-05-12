@@ -29,33 +29,33 @@ By building the quadrotors ourselves, we would be able to reduce the cost per qu
 
 
 ### Adafruit
-| Part Number	| Description	| Weight (g)	| QTY	| Cost/ea.	|
+| Part Number | Description | Weight (g) | QTY | Cost/ea. |
 | :--- | :--- | :---: | :---: | :---: |
-|2885 | Raspberry Pi Zero |9.00 g |	1	| 5	|
-|3157 | Raspberry Pi Zero Camera Cable	 | -- |	1 |	5.95	|
-|3099 | Raspberry Pi Camera Board v2 - 8 Megapixels | -- |		1 |	29.95	|
-|3196 | Pimoroni Zero LiPo | 2.60 g | 1 |	1	9.95	|
-|2471 | ESP8266 Breakout (WiFi) |	--	| 0 |	9.95	|
-|3070 | RFM69HCW Breakout (Radio) |	--	| 1 |	9.95	|
-|1781 | Lithium Ion Cylindrical Battery - 3.7v 2200mAh |	46.00 g |	1	| 9.95	|
+| 2885 | Raspberry Pi Zero | 9.00 g | 1 | 5 |
+| 3157 | Raspberry Pi Zero Camera Cable | -- | 1 | 5.95 |
+| 3099 | Raspberry Pi Camera Board v2 - 8 Megapixels | -- | 1 | 29.95 |
+| 3196 | Pimoroni Zero LiPo | 2.60 g | 1 | 9.95 |
+| 2471 | ESP8266 Breakout (WiFi) | -- | 0 | 9.95 |
+| 3070 | RFM69HCW Breakout (Radio) | -- | 1 | 9.95 |
+| 1781 | Lithium Ion Cylindrical Battery - 3.7v 2200mAh | 46.00 g | 1 | 9.95 |
 
 ### eBay
 
 
-| Part Number	| Description	| QTY	| Cost/ea.	|
+| Part Number | Description | QTY | Cost/ea. |
 | :--- | :--- | :---: | :---: | :---: |
-| NEO-M8N	NEO-M8N | GPS Module	 |	1	 | 13.02 |
-| MPU 9250 |	Gyro + Accelerometer + Magnetometer |		1 | 	3.16 |
-| | Electronics for Power and flight controller |		1	| 29.99 |
-| RFM69HCW |	RFM69HCW (Radio) |		1 | 	4.25 |
-| X5C |	2 Pairs DC Motor |		1 | 	29.99 |
-| X5C |	Propellers |		2 | 	0.99 |
+| NEO-M8N NEO-M8N | GPS Module | 1 | 13.02 |
+| MPU 9250 | Gyro + Accelerometer + Magnetometer | 1 | 3.16 |
+| -- | Electronics for Power and flight controller | 1 | 29.99 |
+| RFM69HCW | RFM69HCW (Radio) | 1 | 4.25 |
+| X5C | 2 Pairs DC Motor | 1 | 29.99 |
+| X5C | Propellers | 2 | 0.99 |
 
 
-Total
-$143.19
+Total:
+~$143.19
 
-Total Weight
-157.60 g
+Total Weight:
+~157.60 g
 
 **[back to top](#table-of-contents)**
