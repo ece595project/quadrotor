@@ -32,7 +32,7 @@ description: How we propose to measure the progress of the Quadrotor SAR project
 | 4/15 | Meeting to discuss further ROS work. |
 | 4/15 | Begin core development. |
 | 4/28 | All parts received. |
-| 4/29 | Parts sent back fro replacement. |
+| 4/29 | Parts sent back for replacement. |
 | 5/7 | Begin updates on project website. |
 | 5/10 | Updates to project website completed. |
 | 5/12 | Project deadline. |
@@ -50,6 +50,6 @@ description: How we propose to measure the progress of the Quadrotor SAR project
 - [ ] Complete testing using constructed quadrotors.
 - [x] Complete project website.
 
-While we are behind in our milestones by about two weeks, we have completed most of the objectives we had initially set out to accomplish. The last step would have been to test the code we wrote on actual hardware, but due to shipping delays, we just don't have enough time to complete this step. 
+While we are behind in our milestones by about two weeks, we have completed most of the objectives we had initially set out to accomplish. The last step would have been to test the code we wrote on actual hardware, but due to shipping delays, we just don't have enough time to complete this step.
 
 **[back to top](#table-of-contents)**

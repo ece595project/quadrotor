@@ -31,8 +31,6 @@ Create ROS and Gazebo simulation, and begin development on embedded software.
 
 Once the components arrive, we will be able to develop the code for them individually, so that we can complete our quadrotors once we have all of the components without any delay.
 
-__NOTE:__
-
 ### Phase 3:
 
 Assemble quadrotors and perform real-world testing.

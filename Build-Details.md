@@ -45,4 +45,6 @@ Parts list is per quadrotor.
 Total:
 ~$155
 
+__NOTE:__ This cost does not factor in the GPS, Raspberry Pi Zero, Camera, or other components necessary to make this work. All together, this would add another ~$100 to the total cost of a single quadrotor.
+
 **[back to top](#table-of-contents)**
