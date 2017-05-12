@@ -42,3 +42,5 @@ Unfortunately, as with much of ROS, there is little to no documentation on how t
 ## Our Approach
 
 Luckily, we are able to utilize the same code base for our Docker image for every quadrotor. Since each quadrotor performs nearly the same actions, we can reuse the code from one quadrotor and apply it to as many instances (or individual quadrotors) as we have available. Because swarm tactics dictates that each quadrotor performs its tasks nearly independently of any centralized hub, we are able to take advantage of ad-hoc networking and Docker to create the behavior for each quadrotor.
+
+**[back to top](#table-of-contents)**

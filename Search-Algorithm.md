@@ -99,3 +99,5 @@ When we have only a single quadrotor, we can sweep an entire area or just a subs
 See the video below, which is also on our home page, to see what the search algorithm looks like in a Gazebo simulation.
 
 {% include youtubePlayer.html id="PK7pUsQQ6ss" %}
+
+**[back to top](#table-of-contents)**

@@ -38,3 +38,5 @@ We were able to connect a GPS module to an Arduino, and via the connection to th
 We created some simulations of our quadrotor's movement characteristics in order to get an idea of how our quadrotors would be able to synchronize their movement in a simulated environment.
 
 For more information on the search pattern design, see the documentation on the [Search Algorithm](https://ece595project.github.io/quadrotor/Search-Algorithm)
+
+**[back to top](#table-of-contents)**
