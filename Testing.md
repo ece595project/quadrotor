@@ -4,11 +4,11 @@ layout: default
 description: Testing of the Quadrotor SAR project code.
 ---
 
+[Home](https://ece595project.github.io/quadrotor/)
+
 # {{page.title}}
 
 {{page.description}}
-
-[Home](https://ece595project.github.io/quadrotor/)
 
 ## Table of Contents
 

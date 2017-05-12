@@ -4,11 +4,11 @@ layout: default
 description: Quadrotor SAR project quadrotor bill of materials.
 ---
 
+[Home](https://ece595project.github.io/quadrotor/)
+
 # {{page.title}}
 
 {{page.description}}
-
-[Home](https://ece595project.github.io/quadrotor/)
 
 ## Table of Contents
 

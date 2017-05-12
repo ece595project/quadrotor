@@ -4,11 +4,11 @@ layout: default
 description: Initial proposal for the Quadrotor SAR project.
 ---
 
+[Home](https://ece595project.github.io/quadrotor/)
+
 # {{page.title}}
 
 {{page.description}}
-
-[Home](https://ece595project.github.io/quadrotor/)
 
 ## Table of Contents
 

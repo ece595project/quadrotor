@@ -4,11 +4,11 @@ layout: default
 description: Search algorithm design for the Quadrotor SAR project.
 ---
 
+[Home](https://ece595project.github.io/quadrotor/)
+
 # {{page.title}}
 
 {{page.description}}
-
-[Home](https://ece595project.github.io/quadrotor/)
 
 ## Table of Contents
 
@@ -28,6 +28,8 @@ What we decided to implement in our system, despite the fact that it may be less
 We decided that using polar coordinates was desirable, mainly due to the fact that the quadrotors would not always be in range to communicate with each other or with the rescuer. We first investigated whether or not a search path such as the one below was adequate for our needs, but felt there was too much area that would be left unsearched, and that if the person was in an area that didn't overlap with the search path, the quadrotor would not detect them, or would take a long time to find them.
 
 Additional quadrotors could be offset by a number of degrees, increasing the coverage area, but we thought that this would require more quadrotors than might be available. We wanted the system to work with only a single quadrotor, as well as a swarm. Also, we wanted to be able to point the quadrotor in one direction, and a polar sine pattern is not conducive to this behavior.
+
+If we increased the coverage of a single quadrotor, it meant that a person who was offset from the original angle by 90 degrees would take the longest to find, and in search and rescue, time is a critical factor.
 
 ![Polar Sine]({{ site.url }}/quadrotor/assets/polar_sine.png)
 

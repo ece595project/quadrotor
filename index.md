@@ -24,11 +24,14 @@ Search and rescue is a dangerous job, requiring a coordinated, large-scale effor
 
 The big-picture implementation of our project would be for search and rescue assistance. Aerial robots could conduct a coordinated survey of a large area, giving rescue personnel critical information to safely navigate to found victims. However, with the time that we have to complete our project, coordinated "swarm" movement will be our core focus.
 
-## Successes
+## Milestones
 
 - [x] Worked with an actual quadrotor to learn how to subscribe to ROS topics from actual sensor data.
 - [x] Implement ROS code for quadrotor movement.
 - [x] Test component integration with ROS topics.
+- [x] Create search algorithm.
+- [x] Integrate search algorithm into ROS code.
+- [x]
 
 ## Initial Proposal
 

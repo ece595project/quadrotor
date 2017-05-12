@@ -4,11 +4,11 @@ layout: default
 description: Deployment instructions to start the Quadrotor SAR demo.
 ---
 
+[Home](https://ece595project.github.io/quadrotor/)
+
 # {{page.title}}
 
 {{page.description}}
-
-[Home](https://ece595project.github.io/quadrotor/)
 
 ## Table of Contents
 

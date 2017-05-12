@@ -4,11 +4,11 @@ layout: default
 description: How we propose to measure the progress of the Quadrotor SAR project.
 ---
 
+[Home](https://ece595project.github.io/quadrotor/)
+
 # {{page.title}}
 
 {{page.description}}
-
-[Home](https://ece595project.github.io/quadrotor/)
 
 ## Table of Contents
 
