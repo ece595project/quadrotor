@@ -24,24 +24,28 @@ Search and rescue is a dangerous job, requiring a coordinated, large-scale effor
 
 The big-picture implementation of our project would be for search and rescue assistance. Aerial robots could conduct a coordinated survey of a large area, giving rescue personnel critical information to safely navigate to found victims. However, with the time that we have to complete our project, coordinated "swarm" movement will be our core focus.
 
-## Milestones
+## Achievements
 
 - [x] Worked with an actual quadrotor to learn how to subscribe to ROS topics from actual sensor data.
-- [x] Implement ROS code for quadrotor movement.
-- [x] Test component integration with ROS topics.
-- [x] Create search algorithm.
+- [x] Implemented ROS code for quadrotor movement.
+- [x] Tested component integration with ROS topics.
+- [x] Created search algorithm.
 - [x] Integrate search algorithm into ROS code.
-- [x]
+- [x] Finished Docker work for deployment.
+- [x] Performed device integration testing using modules.
 
-## Initial Proposal
+## Milestones
 
-Take a look at our [initial proposal](https://ece595project.github.io/quadrotor/Initial-Proposal) for the project, and then view the relevant sections below to see how things have changed since the start of the project.
-
-- [Cost](https://ece595project.github.io/quadrotor/Cost)
-- [Difficulties](https://ece595project.github.io/quadrotor/Difficulties)
-- [Measurement](https://ece595project.github.io/quadrotor/Measurement)
-- [Organization](https://ece595project.github.io/quadrotor/Organization)
-- [Software](https://ece595project.github.io/quadrotor/Software)
+- [x] Initial work completed on quadrotor design.
+- [x] Parts ordered from vendors.
+- [x] Completed work on ROS movement code.
+- [x] Completed work on Docker swarm code.
+- [x] Completed ROS integration testing with borrowed quadrotor.
+- [x] Partially completed hardware + ROS integration for modules.
+    (On hold until parts are received.)
+- [ ] Complete quadrotor construction.
+- [ ] Complete testing using constructed quadrotors.
+- [x] Complete project website.
 
 ## Links
 
@@ -66,6 +70,17 @@ Below you will find links to the project pages, detailing our design project.
 ### Reports
 
 - We have included a [project report](https://ece595project.github.io/quadrotor/Project-Report), summing up our experiences working on this project and how we would like to proceed in the future.
+
+### Proposal
+
+- Take a look at our [initial proposal](https://ece595project.github.io/quadrotor/Initial-Proposal) for the project, and then view the relevant sections below to see how things have changed since we started.
+
+    - [Cost](https://ece595project.github.io/quadrotor/Cost)
+    - [Difficulties](https://ece595project.github.io/quadrotor/Difficulties)
+    - [Measurement](https://ece595project.github.io/quadrotor/Measurement)
+    - [Organization](https://ece595project.github.io/quadrotor/Organization)
+    - [Software](https://ece595project.github.io/quadrotor/Software)
+
 
 
 **[back to top](#table-of-contents)**
