@@ -31,4 +31,6 @@ However, it is still true that we would be able to decrease the cost of the syst
 
 Check out the [Quadrotor BOM](https://ece595project.github.io/quadrotor/Quadrotor-BOM) for a breakdown of our anticipated costs.
 
+Check out the [Quadrotor Build Details](https://ece595project.github.io/quadrotor/Build-Details) for a more accurate estimate of the overall cost.
+
 **[back to top](#table-of-contents)**

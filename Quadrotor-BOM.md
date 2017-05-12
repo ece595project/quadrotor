@@ -29,6 +29,7 @@ By building the quadrotors ourselves, we would be able to reduce the cost per qu
 
 
 ### Adafruit
+
 | Part Number | Description | Weight (g) | QTY | Cost/ea. |
 | :--- | :--- | :---: | :---: | :---: |
 | 2885 | Raspberry Pi Zero | 9.00 g | 1 | 5 |
@@ -40,7 +41,6 @@ By building the quadrotors ourselves, we would be able to reduce the cost per qu
 | 1781 | Lithium Ion Cylindrical Battery - 3.7v 2200mAh | 46.00 g | 1 | 9.95 |
 
 ### eBay
-
 
 | Part Number | Description | QTY | Cost/ea. |
 | :--- | :--- | :---: | :---: | :---: |
