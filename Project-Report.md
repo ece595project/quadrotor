@@ -49,4 +49,10 @@ One of the major problems we had with this project was cost. While we would have
 
 Initially, we had thought to build a flight controller "hat" for the Raspberry Pi Zero, with a GPS module on-board, but the constraints on our project meant that we had to focus on other features of the project rather than focusing on what we considered to be "stretch goals."
 
+### Future
+
+Some things we would like to do in the future on this project include performing the actual testing of our ROS code on an actual quadrotor. However, there are some hurdles we would need to cross in order to make that a reality. For one, we would need to either purchase a flight controller board such as the PXF Mini in order to facilitate both GPS and camera feature sets we had hoped to include from the beginning, or build our own board as mentioned above. Building our own board would likely not be overly expensive, and we could likely cut the cost of the flight controller in half once component cost was taken into account.
+
+We did some exploratory research on producing our own boards, as well as component selection for making the boards ourselves. You can find more information on the components and design work at our [Autopilot GitHub Page](https://github.com/ece595project/autopilot/blob/development/Components.xlsx).
+
 **[back to top](#table-of-contents)**
